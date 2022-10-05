@@ -84,10 +84,8 @@ if ($isediting) {
     }
 }
 
-// Include format.js (required for dragging sections around).
 $PAGE->requires->js('/course/format/tiles/format.js');
 
-// Include amd module required for AJAX calls to change tile icon, filter buttons etc.
 if (!empty($displaysection)) {
     $jssectionnum = $displaysection;
 } else if (! $jssectionnum = optional_param('expand', 0, PARAM_INT)) {
@@ -100,7 +98,7 @@ $allowedmodmodals = format_tiles_allowed_modal_modules();
 
 $jsparams = array(
     'courseId' => $course->id,
-    'useJSNav' => $usejsnav, // See also lib.php page_set_course().
+    'useJSNav' => $usejsnav,
     'isMobile' => $ismobile,
     'jsSectionNum' => $jssectionnum,
     'displayFilterBar' => $course->displayfilterbar,
@@ -114,7 +112,7 @@ $jsparams = array(
 );
 
 if (!$isediting) {
-    // Initalise the main JS module for non editing users.
+    
     $PAGE->requires->js_call_amd(
         'format_tiles/course', 'init', $jsparams
     );

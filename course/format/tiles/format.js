@@ -58,7 +58,7 @@ M.course.format.process_sections = function(Y, sectionlist, response, sectionfro
             sectionfrom = temp;
         }
 
-        // Update titles and move icons in all affected sections.
+        
         var ele, str, stridx, newstr;
 
         for (var i = sectionfrom; i <= sectionto; i++) {

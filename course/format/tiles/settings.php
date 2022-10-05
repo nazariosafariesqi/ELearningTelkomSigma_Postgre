@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die;
 require_once($CFG->dirroot . '/course/format/tiles/lib.php');
 
 if ($ADMIN->fulltree) {
-    $settings = null; // We add our own settings pages and do not want the standard settings link.
+    $settings = null; 
 
     $settingscategory = new \format_tiles\admin_settingspage_tabs('formatsettingtiles', get_string('pluginname', 'format_tiles'));
 
